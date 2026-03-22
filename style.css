@@ -15,12 +15,14 @@ body {
 .container {
     text-align: center;
     background: rgba(255, 255, 255, 0.95);
-    padding: 20px; /* 少しだけ余白を狭くして中身を広く */
+    /* ↓ここを修正！左右の壁を薄くして、中を広くします */
+    padding: 20px 10px; 
     border-radius: 20px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.5);
     max-width: 400px;
-    width: 90%; /* ★ここ！画面の横幅90%を使い切るようにします */
-    margin: 20px auto; /* 上下に隙間を作って真ん中に寄せる */
+    /* ↓ここを修正！スマホ画面いっぱいに広げます */
+    width: 95%; 
+    margin: 20px auto;
 }p {
     font-size: 0.9rem; /* 標準(1.0)より少し小さくして、枠に収める */
     line-height: 1.6;   /* 行と行の間隔を少し広げて、読みやすくする */
