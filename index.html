@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>サッカーキャリア抽選</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⚽ サッカー移籍ガチャ</h1>
+        <p>あなたの移籍先クラブを決めよう！<br>
+
+            あなた(日本人選手)の移籍先が、星１～星５のレアリティ別で抽選されるツールです。
+            移籍先と同時にゴール、アシスト数のシーズン成績も抽選されます。<br>
+            (選んだ状況によって各レアリティの抽選確率が変動します。)
+        </p>
+        
+        <div class="career-select">
+            <label for="career-stage">今のあなたの状況は？</label>
+            <select id="career-stage">
+                <option value="rookie">🌱 高卒ルーキー</option>
+                <option value="mid">🔥 即戦力の中堅</option>
+                <option value="vet">👑 歴戦のベテラン</option>
+            </select>
+        </div>
+        
+        <button id="draw-btn">シーズン結果を見る＆移籍先抽選！</button>
+
+        <div id="result-area" class="hidden">
+            <div class="stats-box">
+                <h3>今シーズンの成績</h3>
+                <div class="stats-numbers">
+                    <div><span id="goals">0</span><br>ゴール</div>
+                    <div><span id="assists">0</span><br>アシスト</div>
+                </div>
+                <div id="scout-comment" class="highlight"></div>
+            </div>
+
+            <div class="card">
+                <p style="margin: 0; color: #666; font-size: 0.9rem;">決定した移籍先</p>
+                <div id="rarity" class="stars"></div>
+                <div id="club-name"></div>
+                <div id="country-flag"></div>
+                <div id="story-text" style="margin-top: 15px; font-weight: bold; color: #e74c3c;"></div>
+            </div>
+            
+            <div class="share-section">
+                <p>結果をみんなに教える？</p>
+                <div class="share-buttons">
+                    <a id="share-link-x" href="#" target="_blank">𝕏 (Twitter)でシェア</a>
+                    <a id="share-link-line" href="#" target="_blank">LINEで送る</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

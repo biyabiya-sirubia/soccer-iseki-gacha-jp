@@ -1,0 +1,78 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1518605368461-1ee7e55127ce?q=80&w=2000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    max-width: 400px;
+    width: 100%;
+    /* ★説明文（pタグ）の文字サイズを調整★ */
+p {
+    font-size: 0.9rem; /* 標準(1.0)より少し小さくして、枠に収める */
+    line-height: 1.6;   /* 行と行の間隔を少し広げて、読みやすくする */
+    color: #555;        /* 真っ黒より少しグレーにして、オシャレに見せる */
+    margin-bottom: 20px; /* 下に少し隙間を作る */
+}
+}
+
+.career-select { margin: 20px 0; text-align: left; }
+.career-select label { display: block; margin-bottom: 5px; font-weight: bold; color: #333; }
+select { width: 100%; padding: 10px; font-size: 1rem; border: 2px solid #ccc; border-radius: 8px; cursor: pointer; }
+
+button {
+    padding: 15px 30px; font-size: 1.2rem; background-color: #28a745; color: white;
+    font-weight: bold; border: none; border-radius: 50px; cursor: pointer;
+    transition: 0.3s; width: 100%; margin-top: 10px; position: relative; overflow: hidden;
+}
+button:hover { background-color: #218838; transform: scale(1.05); }
+button::before {
+    content: ""; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-20deg); animation: shine 3s infinite;
+}
+@keyframes shine { 0% { left: -100%; } 20% { left: 200%; } 100% { left: 200%; } }
+
+.hidden { display: none; }
+
+.stats-box {
+    background: #e3f2fd;
+    border: 2px solid #2196f3;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+}
+.stats-box h3 { margin: 0 0 10px 0; font-size: 1.1rem; color: #1565c0; }
+.stats-numbers { display: flex; justify-content: space-around; font-weight: bold; }
+.stats-numbers span { font-size: 2rem; color: #d32f2f; }
+.highlight { margin-top: 10px; font-weight: bold; color: #ff5722; background: #fff; padding: 5px; border-radius: 5px;}
+
+.card { margin-top: 20px; padding: 20px; border: 3px solid #ffd700; border-radius: 15px; background: #fffdf0; }
+#club-name { font-size: 1.8rem; font-weight: bold; margin: 10px 0; }
+.stars { color: #ff9900; font-size: 1.5rem; }
+
+/* ★シェアボタンのデザインを新しくしました★ */
+.share-section { margin-top: 20px; padding-top: 20px; border-top: 1px solid #ccc; }
+.share-buttons { display: flex; justify-content: center; gap: 10px; margin-top: 10px; }
+
+#share-link-x { 
+    display: inline-block; background: #000; color: white; 
+    text-decoration: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; 
+}
+#share-link-line { 
+    display: inline-block; background: #06C755; color: white; /* LINEの公式グリーン */
+    text-decoration: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; 
+}
