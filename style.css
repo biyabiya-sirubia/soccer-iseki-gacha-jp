@@ -8,8 +8,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 0;
-    padding: 20px;
+    /* ↓ここが魔法！下の固定広告に隠れないよう、一番下に120pxの透明な隙間を作る！ */
+    padding: 20px 20px 120px 20px; 
 }
 
 .container {
@@ -23,11 +23,19 @@ body {
     /* ↓ここを修正！スマホ画面いっぱいに広げます */
     width: 95%; 
     margin: 20px auto;
-}p {
-    font-size: 0.9rem; /* 標準(1.0)より少し小さくして、枠に収める */
-    line-height: 1.6;   /* 行と行の間隔を少し広げて、読みやすくする */
-    color: #555;        /* 真っ黒より少しグレーにして、オシャレに見せる */
-    margin-bottom: 20px; /* 下に少し隙間を作る */
+}p /* ★タイトルの文字サイズ調整★ */
+h1 {
+    font-size: 1.5rem; /* 少し小さくしました */
+    margin-top: 0;
+    white-space: nowrap; /* 絶対に改行させない（横に1行で並べる）魔法 */
+}
+
+/* ★説明文の文字サイズ調整★ */
+p {
+    font-size: 0.85rem; 
+    line-height: 1.5;   
+    color: #444;        
+    margin-bottom: 20px; 
 }
 
 .career-select { margin: 20px 0; text-align: left; }
