@@ -171,17 +171,11 @@ document.getElementById('draw-btn').addEventListener('click', () => {
     document.getElementById('rarity').innerText = "★".repeat(resultStar);
     document.getElementById('story-text').innerText = resultStory;
     
-// ★SNSシェア用のテキスト作成（共通）★
-    const stageName = document.getElementById('career-stage').options[document.getElementById('career-stage').selectedIndex].text.split(' ')[1];
-    // サイトのURLを後で自分のGitHub PagesのURLに変更すると、友達が直接サイトに飛べるようになります！
-    const siteUrl = "https://あなたのGitHubユーザー名.github.io/soccer-career/"; 
-    const text = `今季【${goals}ゴール ${assists}アシスト】の成績で\n${stageName}として「${finalClub.name} ${finalClub.flag}」へ移籍決定！\nレア度：${"★".repeat(resultStar)}\n『${resultStory}』\n#俺のサッカーキャリア\n${siteUrl}`;
+// ★ここが大事な公開URL★
+    const siteUrl = "https://biyabiya-sirubia.github.io/soccer-iseki-gacha-jp/"; 
+    const shareText = `今季【${goals}ゴール ${assists}アシスト】の成績で「${finalClub.name} ${finalClub.flag}」へ移籍決定！\n#俺のサッカーキャリア\n${siteUrl}`;
 
-    // 𝕏 (Twitter) 用のリンク
-    document.getElementById('share-link-x').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
-    
-    // LINE用のリンク
-    document.getElementById('share-link-line').href = `https://line.me/R/msg/text/?${encodeURIComponent(text)}`;
-
+    document.getElementById('share-link-x').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
+    document.getElementById('share-link-line').href = `https://line.me/R/msg/text/?${encodeURIComponent(shareText)}`;
     document.getElementById('result-area').classList.remove('hidden');
 });

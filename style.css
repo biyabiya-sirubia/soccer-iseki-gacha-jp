@@ -15,18 +15,17 @@ body {
 .container {
     text-align: center;
     background: rgba(255, 255, 255, 0.95);
-    padding: 30px;
+    padding: 20px; /* 少しだけ余白を狭くして中身を広く */
     border-radius: 20px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.5);
     max-width: 400px;
-    width: 100%;
-    /* ★説明文（pタグ）の文字サイズを調整★ */
-p {
+    width: 90%; /* ★ここ！画面の横幅90%を使い切るようにします */
+    margin: 20px auto; /* 上下に隙間を作って真ん中に寄せる */
+}p {
     font-size: 0.9rem; /* 標準(1.0)より少し小さくして、枠に収める */
     line-height: 1.6;   /* 行と行の間隔を少し広げて、読みやすくする */
     color: #555;        /* 真っ黒より少しグレーにして、オシャレに見せる */
     margin-bottom: 20px; /* 下に少し隙間を作る */
-}
 }
 
 .career-select { margin: 20px 0; text-align: left; }
