@@ -9,7 +9,7 @@ body {
     align-items: center;
     min-height: 100vh;
     /* ↓ここが魔法！下の固定広告に隠れないよう、一番下に120pxの透明な隙間を作る！ */
-    padding: 20px 20px 120px 20px; 
+    padding: 20px; 
 }
 
 .container {
@@ -25,9 +25,8 @@ body {
     margin: 20px auto;
 }p /* ★タイトルの文字サイズ調整★ */
 h1 {
-    font-size: 1.5rem; /* 少し小さくしました */
+    font-size: 1.1rem; /* 少し小さくしました */
     margin-top: 0;
-    white-space: nowrap; /* 絶対に改行させない（横に1行で並べる）魔法 */
 }
 
 /* ★説明文の文字サイズ調整★ */
